@@ -1,0 +1,112 @@
+Introdução ao JavaScript
+
+linguagem interpretada
+Criador Ryan Dahl
+
+/* (https://walde.co/2016/11/27/node-js-v8-single-thread-e-o-que-e-esse-event-loop-afinal/)
+V8
+Criada pelo Google
+Open Source (2008)
+O V8 compila o código para linguagem de máquina, além de otimizar drasticamente a execução usando heurísticas, permitindo que a execução seja feita em cima do código compilado e não interpretado.
+@re
+Single Thread
+A primeira vista o modelo single thread parece não fazer sentido
+"Qual seria a vantagem de limitar a execução da aplicação em somente uma thread?"
+O cenário mais comum é um servidor web que recebe milhões de requisições por segundo; Se o servidor iniciar uma nova thread para cada requisição vai gerar um alto custo de recursos e cada vez mais será necessário adicionar novos servidores para suportar a demanda. O modelo assíncrono single thread consegue processar mais requisições concorrentes do que o exemplo anterior, com um número bem menor de recursos.
+Ser single thread não significa que o Node.js não usa threads internamente, para entender mais sobre essa parte devemos primeiro entender o conceito de I/O assíncrono não bloqueante.
+
+I/O assíncrono não bloqueante
+*/
+
+https://walde.co/2016/11/27/node-js-o-que-e-esse-event-loop-afinal/
+https://walde.co/2016/02/15/javascript-hoisting-o-que-e/
+
+ECMA Script
+
+https://walde.co/2016/06/19/ecmascript-6-classes/
+https://flaviocopes.com/ecmascript/
+https://medium.com/@dupski/what-major-new-features-were-in-each-javascript-version-what-version-should-i-target-25526c498687
+
+Passando, Presente e Futuro
+# Passado
+## Historia
+## Evolução
+# Presente
+# Futuro
+# Hands On
+
+
+Titulo: Javascript: Como Surgiu? Onde Vivem? e Como evoluem? (Imagina o tiozinho do globo reporter falando)
+Resumo: Abordar a origem da linguagem e as decisões técnicas que a levaram a ser utilizada como é hoje. Demonstrar a evolução da linguagem e quais os recursos que estarão por vir. Fazer uma demostração da stack completa da linguagem.
+Tempo: entre 30 e 40min
+Palestrante: Itor Isaias ( 6 Tech )
+
+
+# Historia
+1989, Tim Berners Lee  criou a (WWW) World Wide Web
+
+Evolução dos browsers, onde apenas utilizados para intercambio de estudos
+
+Marc Andressen, criado do NCSA Mosaic, lançou o Netscape em 1994
+
+(Hyper card)(Linguagem de script embutida - Apple)
+
+## Primeira tentativa
+Brendan Eich foi receutado em 1995 para escrever uma linguagem de programação para navegador 
+(Se baseou em Scheme, um dialeto de Lisp)
+
+Adivinha, alguém na Netscape descobriu que Scheme era muito complicado
+(IMG do Scheme)
+
+Motivo: Mas a linguagem precisava ser mais popular e fácil de usar
+(Tipo Java na époça)
+
+## Segunda tentativa
+Ele implementou a linguagem JavaScript em 10 dias (lendas), em maio de 1995, utilizando como base as linguagens Java, Scheme, Self (smallTalk) e com algumas influências de Perl
+(Grande parte das linguagens são funcionais, porém JavaScript não é puramente funcional, mas tráz conceitos)
+
+Talvez seja por isso que a linguagem JavaScript é tão diferente das outras.
+(Douglas Crockford fala até seja por isso que JavaScript sejá uma das linguagens que as pessoas acham que não precisa estudar para utilizar)
+
+Então foi batizada de Mocha, mas logo depois teve que mudar de nome.
+
+Meses depois, foi lançada com o nome de LiveScript, no Netscape 2.0
+
+Naquela époça estava acontecendo a guerra dos navegadores
+(IE vs Netscape)
+
+E uma forma de atacar a Microsoft a Netscape se uniu com a Sum.
+Em dezembro, o nome mudou para JavaScript, por causa de um acordo.
+(Sum quis colocar Java no Netscape porém Marc não concordou, pq a ideia erá tem algo simples)
+
+O nome JavaScript foi registrado pela Sun e era de uso exclusico da Netscape
+
+A Microsoft fez uma engenharia reversa da linguagem, e criou JScript (Tinha grana né kk)
+
+Com medo de perder o controle, a Netscape tentou padronizar a linguagem em diversas entidades como a W3C, porém foi negada (pois foco deles não era linguagem), e então foi registrada no ECMA.
+
+Em 1997, a Netscape padronizou a linguagem JavaScript junto com a ECMA, trocando o nome para ECMAScript
+(por isso vc vê por ai ECMAScript X e tals)
+
+
+ES1 (1997) - Tudo que já tinha sido desenvolvida até ali. (limitada apenas no browser)
+ES2 (1998) - Apenas atendendo algumas ISO
+ES3 (1999) - try/catch, regular expression, switch, do-while (que mais ficou no mercado)
+    Tempo de trevas e ódio (Aonde todos aqui aprendeu odiar JS kkk)
+    Além da linguagem deixar a desejar, pouca gente sabia utilizá-la corretamente
+ES4 (X) - 
+ES5 (2009) - JSON, strict mode, Object API, Array.prototype.* (map, foreach, reduce)
+    Passaram-se cerca de 10 anos sem o lançamento de novas versões
+    E pq tanto tempo se passou ?
+    O de sempre né treta, houve uma sepação entre equipes (3.1 e 4.0) FUDEU O MERGE NÂO ROLOU
+    Após muita discussão, o TC39 decidiu rejeitar ambas as versões
+    Coisas do 3.1
+ES6 (2015) - Class, Arrow Function, Destructuring, Rest Parameter, Default Value, Template Literal, Spread Operator, Promise, Generators
+    Aqui a linguagem cresceu muito onde nasceu muita lib e frameworks (Ember, Nocaute, Backbone, Angular, Frameworks por segundo)
+    Veio muita coisa do 4.0
+ES7 (2016) - Array.prototype.includes, Exponention operator...
+    Pouca coisa
+ES8 (2018) - Async/Await, Object.values, String.prototype.*
+
+Agora todo ano vai ser lançado uma nova versão, assim que estiver pronto a feature vai sendo liberada.
+Para acabar com a ideia de tipo estou trabalhando com ES6, ES8.
